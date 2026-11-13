@@ -1,0 +1,33 @@
+# Dependencies and generated files
+node_modules/
+dist/
+coverage/
+.cache/
+.npm/
+.vite/
+*.tsbuildinfo
+
+# Local environment and private files
+.env
+.env.*
+*.local
+.npmrc
+*.pem
+*.key
+*.pfx
+*.p12
+/.claude/
+/.codex/
+/.vercel/
+/private/
+/secrets/
+/backups/
+*.bak
+
+# Logs and editor state
+logs/
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

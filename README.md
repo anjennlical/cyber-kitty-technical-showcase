@@ -16,15 +16,21 @@ Create a fictional profile, sort the three records, and reload the page to resum
 
 ![Brazilian Portuguese interface showing five save slots and the three classification categories](docs/screenshots/classification.jpg)
 
-[See a completed checkpoint after reloading in English](docs/screenshots/checkpoint.jpg). Both screenshots use fictional profiles.
+_Classification activity with a fictional profile._
 
-## Closed beta · Chapter 1
+![English interface showing a completed checkpoint after reloading](docs/screenshots/checkpoint.jpg)
 
-The complete game is currently available by invitation. Some characters and artwork are third-party materials, and public distribution permissions are still pending. The full-game link is shared directly with invited testers, who sign in through Vercel.
+_Checkpoint restored after reloading in English._
 
-If you’re interested in trying the demo or joining the closed beta, contact **Larissa Albuquerque**. The technical demo is available immediately at the link above. [Larissa’s GitHub profile](https://github.com/anjennlical)
+## Cyber Kitty Adventures — Chapter 1
 
-**Em português.** A demo técnica é pública e abre sem login. Quer saber mais sobre a demo ou testar o Capítulo 1? Procure Larissa Albuquerque. O link do jogo completo é enviado diretamente a quem for convidado. O acesso exige login na Vercel enquanto as permissões para distribuir personagens e artes de terceiros estiverem pendentes.
+The full game introduces beginners to cybersecurity through storytelling, exploration, and practical challenges in Byteberry Town.
+
+**Interested in playtesting Chapter 1?** Contact **Larissa Albuquerque** at [kerlalarissa@gmail.com](mailto:kerlalarissa@gmail.com) for playtesting details.
+
+Cyber Kitty Adventures is an independent fan project. Third-party characters and artwork belong to their respective owners. Licensing discussions are ongoing. The project has no official affiliation with Sanrio.
+
+**Em português.** A demo técnica está disponível acima. Para conhecer ou testar o Capítulo 1 do jogo educativo, escreva para Larissa Albuquerque pelo e-mail [kerlalarissa@gmail.com](mailto:kerlalarissa@gmail.com).
 
 ## About the project
 
@@ -54,10 +60,15 @@ Cyber Kitty Adventures introduces beginners to cybersecurity through practical d
 
 ## Getting started
 
-Install dependencies and start the local server from the repository folder.
+Install dependencies from the repository folder.
 
 ```powershell
 npm.cmd ci
+```
+
+Start the development server.
+
+```powershell
 npm.cmd run dev
 ```
 
@@ -67,6 +78,11 @@ Open [the local demo](http://127.0.0.1:4173/). Restart the command after editing
 npm.cmd run typecheck
 npm.cmd run build
 npm.cmd test
+```
+
+Preview the current production build.
+
+```powershell
 npm.cmd run preview
 ```
 

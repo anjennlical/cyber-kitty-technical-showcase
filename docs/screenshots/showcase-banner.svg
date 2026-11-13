@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#fff5f8"/>
+      <stop offset="1" stop-color="#f8d5e7"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="958" height="228" rx="32" fill="url(#paper)" stroke="#d994b8" stroke-width="2"/>
+  <rect x="13" y="13" width="934" height="204" rx="24" fill="none" stroke="#e9b3cc" stroke-dasharray="3 7"/>
+  <g transform="translate(480 51)" stroke="#a83571" stroke-width="2.5" fill="#ea8eb8">
+    <path d="M-5 0C-14-9-28-13-29-4c-1 4-1 8 0 12 3 8 15 3 24-3m10-5c9-9 23-13 24-4 1 4 1 8 0 12-3 8-15 3-24-3"/>
+    <rect x="-6" y="-4" width="12" height="13" rx="5" fill="#f7afcd"/>
+  </g>
+  <g fill="#bd5a91">
+    <path d="M92 103q2 14 16 16-14 2-16 16-2-14-16-16 14-2 16-16m776 0q2 14 16 16-14 2-16 16-2-14-16-16 14-2 16-16"/>
+    <circle cx="128" cy="152" r="3"/><circle cx="832" cy="152" r="3"/>
+  </g>
+  <g text-anchor="middle" font-family="system-ui, sans-serif">
+    <text x="480" y="119" font-size="48" font-weight="750" fill="#61234f">Cyber Kitty Adventures</text>
+    <text x="480" y="163" font-size="23" font-weight="600" fill="#824168">Technical Showcase</text>
+  </g>
+</svg>

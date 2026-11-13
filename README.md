@@ -1,5 +1,7 @@
 # Cyber Kitty Adventures — Technical Showcase
 
+![Pink Cyber Kitty Adventures Technical Showcase banner with a bow](docs/screenshots/showcase-banner.svg)
+
 **Interactive Systems, State Management & Cybersecurity Education**
 
 A browser-based exercise about deciding which records can be published, which need verification, and which should stay private. It presents the save system, mission state, localization, and interactions developed for the showcase of a larger cybersecurity education project.
@@ -8,13 +10,21 @@ A browser-based exercise about deciding which records can be published, which ne
 
 ## Live demo
 
-[Try the Technical Showcase](https://cyber-kitty-technical-showcase.vercel.app/)
+**[Play the public demo](https://cyber-kitty-technical-showcase.vercel.app/)** · No sign-in required
 
 Create a fictional profile, sort the three records, and reload the page to resume. Switch between English and Brazilian Portuguese at any point. Saves belong to the browser origin, so progress on the hosted demo is separate from a local session.
 
 ![Brazilian Portuguese interface showing five save slots and the three classification categories](docs/screenshots/classification.jpg)
 
 [See a completed checkpoint after reloading in English](docs/screenshots/checkpoint.jpg). Both screenshots use fictional profiles.
+
+## Closed beta · Chapter 1
+
+The complete game is currently available by invitation. Some characters and artwork are third-party materials, and public distribution permissions are still pending. The full-game link is shared directly with invited testers, who sign in through Vercel.
+
+If you’re interested in trying the demo or joining the closed beta, contact **Larissa Albuquerque**. The technical demo is available immediately at the link above. [Larissa’s GitHub profile](https://github.com/anjennlical)
+
+**Em português.** A demo técnica é pública e abre sem login. Quer saber mais sobre a demo ou testar o Capítulo 1? Procure Larissa Albuquerque. O link do jogo completo é enviado diretamente a quem for convidado. O acesso exige login na Vercel enquanto as permissões para distribuir personagens e artes de terceiros estiverem pendentes.
 
 ## About the project
 

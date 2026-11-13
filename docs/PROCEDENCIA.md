@@ -13,6 +13,8 @@ Cyber Kitty Adventures foi concebido e dirigido por Larissa Albuquerque. A docum
 | `scripts/`, `tests/` e configurações | Escritos para a demonstração. O lockfile referencia a versão fixada do compilador usada na validação |
 | `web/Nunito.ttf` e `web/Nunito-OFL.txt` | Fonte e aviso copiados do recurso instalado no jogo. Copyright e termos SIL Open Font License 1.1 preservados. SHA-256 da fonte `BB55A5CA5C2042335B3991AF27C4D0705D0EF41CAC6164AC737FD8F2A1E85207` |
 
+As capturas em docs/screenshots/ mostram a própria demonstração em execução com perfis fictícios. classification.jpg foi obtida em localhost e redimensionada para o README. checkpoint.jpg registra a retomada após recarga no domínio da Vercel, em um perfil isolado.
+
 Os módulos de referência no projeto original foram revisados para identificar dependências e conteúdo de campanha. A demo reimplementa os padrões com dados próprios. O modelo MIT da Phaser Studio e a biblioteca Phaser continuam creditados no projeto original. Nenhum código do modelo ou da biblioteca integra esta seleção. O compilador TypeScript é distribuído sob Apache-2.0 pelo respectivo pacote npm, que contém seu texto de licença e avisos.
 
 ## Escopo dos direitos

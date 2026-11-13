@@ -1,37 +1,57 @@
 # Cyber Kitty Adventures — Technical Showcase
 
-Demonstração técnica local de quatro sistemas desenvolvidos no contexto de Cyber Kitty Adventures, um projeto educativo de cibersegurança para iniciantes. A interface usa um exercício curto de classificação de registros com textos e perfis inventados.
+**Interactive Systems, State Management & Cybersecurity Education**
 
-## O que experimentar
+A browser-based exercise about deciding which records can be published, which need verification, and which should stay private. It presents the save system, mission state, localization, and interactions developed for the showcase of a larger cybersecurity education project.
 
-1. Escolha um dos cinco slots e crie um perfil com um apelido inventado.
-2. Leia os três cartões. Arraste um cartão para uma categoria ou selecione o cartão e depois a categoria. Pelo teclado, use Tab e Enter ou Espaço. Esc cancela a seleção.
-3. Confira a classificação. Se alguma escolha precisar de revisão, selecione e mova o cartão para outra categoria.
-4. Troque o idioma ou recarregue a página para verificar a retomada. O menu do perfil permite substituir ou excluir o slot ativo após confirmação.
+*Em português: uma demonstração interativa de persistência, objetivos e localização aplicada à educação em cibersegurança.*
 
-## Arquitetura
+## Live demo
 
-| Arquivo | Responsabilidade |
+[Try the Technical Showcase](https://cyber-kitty-technical-showcase.vercel.app/)
+
+Create a fictional profile, sort the three records, and reload the page to resume. Switch between English and Brazilian Portuguese at any point. Saves belong to the browser origin, so progress on the hosted demo is separate from a local session.
+
+![Brazilian Portuguese interface showing five save slots and the three classification categories](docs/screenshots/classification.jpg)
+
+[See a completed checkpoint after reloading in English](docs/screenshots/checkpoint.jpg). Both screenshots use fictional profiles.
+
+## About the project
+
+Cyber Kitty Adventures introduces beginners to cybersecurity through practical decisions about privacy, verification, and information handling. The showcase focuses on a single classification exercise with fictional records and a purpose-built interface. Its scope is the technical exercise. The full campaign, characters, sprites, soundtrack, and Phaser scenes belong to the separate game.
+
+## Features
+
+- Five independent save slots with profile creation, replacement, and deletion.
+- Versioned local persistence with state validation and stale revision detection.
+- Mission checkpoints for both partial and completed classifications.
+- English and Brazilian Portuguese localization with a saved language preference.
+- Drag and drop or select a record and choose a category. Use Tab and Enter or Space to operate the controls and Escape to cancel selection.
+
+## Tech stack and architecture
+
+**TypeScript 5.7.3**, HTML, CSS, and native browser APIs. Node.js 22 or newer runs the build, local server, and built-in test runner. The deployed application consists of static files.
+
+| Path | Responsibility |
 | --- | --- |
-| `src/saves.ts` | Cinco slots, serialização versionada, validação, troca de perfil e proteção contra edições baseadas em revisão desatualizada |
-| `src/mission.ts` | Regras puras de classificação, validação e avanço do objetivo |
-| `src/locales.ts` | Catálogos tipados PT-BR/EN e seleção de idioma |
-| `src/main.ts` | Composição da interface, eventos de arraste e teclado, modais e persistência de checkpoints |
-| `web/` | HTML, CSS, ilustração geométrica em CSS, fonte e aviso OFL |
-| `scripts/` e `tests/` | Build estática, servidor local e testes com armazenamento em memória |
+| `src/saves.ts` | Slot storage, versioned serialization, validation, and revision checks |
+| `src/mission.ts` | Classification rules, objective states, and completion checks |
+| `src/locales.ts` | Typed PT-BR and English message catalogs |
+| `src/main.ts` | UI rendering, pointer and keyboard events, dialogs, and checkpoint updates |
+| `web/` | HTML, styles, the Nunito font, and its license notice |
+| `scripts/` | Static build and loopback preview server |
+| `tests/` | Automated tests with in-memory storage |
 
-TypeScript 5.7.3 é a única dependência de desenvolvimento. A interface usa APIs nativas do navegador e roda sem dependências de JavaScript em tempo de execução. O servidor de demonstração usa somente módulos da biblioteca padrão do Node.js.
+## Getting started
 
-## Rodar localmente
-
-Requer Node.js 22 ou mais recente e npm. No PowerShell, a partir desta pasta:
+Install dependencies and start the local server from the repository folder.
 
 ```powershell
 npm.cmd ci
 npm.cmd run dev
 ```
 
-Abra `http://127.0.0.1:4173/`. O comando compila e serve os arquivos. Após editar, reinicie o comando para reconstruir. Em outros terminais, use `npm` no lugar de `npm.cmd`. Use Ctrl+C para parar o servidor.
+Open [the local demo](http://127.0.0.1:4173/). Restart the command after editing to rebuild. Outside PowerShell, use `npm` in place of `npm.cmd`.
 
 ```powershell
 npm.cmd run typecheck
@@ -40,14 +60,16 @@ npm.cmd test
 npm.cmd run preview
 ```
 
-A build fica em `dist/`. `preview` serve a última build. Caso a porta padrão esteja ocupada, use `npm.cmd run preview -- 4174`. Os oito testes automatizados cobrem os cinco slots, conflitos de revisão, estados inválidos, falhas de gravação, persistência, regras de conclusão e consistência das traduções.
+The build writes to `dist/`. `preview` serves the current build. Stop the development server first or run `npm.cmd run preview -- 4174` to use another port.
 
-## Decisões e limites
+## Testing and engineering decisions
 
-Cada avanço bem-sucedido grava o estado do exercício no slot. O app valida o JSON ao ler, preserva um registro inválido e detecta alterações que já estejam visíveis no momento da gravação. `localStorage` não oferece transações entre abas. Os perfis e o idioma ficam no navegador, por origem, sob chaves próprias. Use o mesmo protocolo, host e porta ao testar recarga. A demo funciona sem conta ou conexão com serviços externos.
+The eight tests cover slot isolation and selection, checkpoint reloads, replacement and deletion conflicts, invalid records and blocked storage, failed writes, classification completion, malformed assignments, and translation key consistency.
 
-Esta seleção usa registros neutros e uma interface própria. Campanha, Phaser, personagens, sprites, trilhas, cenas e migrações do jogo completo ficaram fora do escopo.
+Each successful classification writes a checkpoint to the active slot. The storage layer validates JSON and detects stale revisions already visible when a write begins. `localStorage` offers no transaction across tabs. Browser storage and native controls let the exercise run without a backend, sign-in, or external service dependency.
 
-## Direitos e atribuições
+## Credits, provenance, and licensing
 
-A licença do código da demonstração ainda está em decisão. A fonte Nunito é distribuída sob SIL Open Font License 1.1, com o aviso que acompanha o arquivo. TypeScript é a dependência de desenvolvimento e tem licença própria. Os créditos do projeto e a origem dos componentes estão documentados. [Procedência e atribuições](docs/PROCEDENCIA.md)
+**Larissa Albuquerque** created the concept, directed the project, shaped its narrative and educational goals, and reviewed its development. See the [provenance and contribution notes](docs/PROCEDENCIA.md).
+
+[Nunito](web/Nunito-OFL.txt) is distributed under the SIL Open Font License 1.1. TypeScript uses Apache-2.0. The license for the showcase code is pending.
